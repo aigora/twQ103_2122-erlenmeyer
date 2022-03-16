@@ -4,7 +4,8 @@
 
 ## Integrantes del equipo
 
-[Nombres, apellidos, y usuario GitHub de los integrantes del equipo.]
+[Jeans Darlenne Velásquez Alejandro : darlennev.
+Susana Ramos Fernandez : ]
 
 ## Objetivos del trabajo
 

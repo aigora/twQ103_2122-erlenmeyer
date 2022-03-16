@@ -5,7 +5,7 @@
 ## Integrantes del equipo
 
 [Jeans Darlenne Velásquez Alejandro : darlennev.
-Susana Ramos Fernandez : ]
+Susana Ramos Fernandez : susanaramos02]
 
 ## Objetivos del trabajo
 

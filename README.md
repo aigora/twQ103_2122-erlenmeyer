@@ -1,6 +1,6 @@
 # En busca del Erlenmeyer Dorado
 
-[Descripción breve del proyecto a realizar (2-3 frases).]
+¿Podras resolver los acertijos y recuperar el erlenmeyer dorado?
 
 ## Integrantes del equipo
 
@@ -10,4 +10,3 @@ Eduardo Viejo Campos: EduardoViejo
 
 ## Objetivos del trabajo
 
-[Lista de los objetivos que se persiguen con el trabajo propuesto.]

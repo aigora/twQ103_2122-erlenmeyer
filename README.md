@@ -1,8 +1,5 @@
 # En busca del Erlenmeyer Dorado
-
-¿Podras resolver los acertijos y recuperar el erlenmeyer dorado? Ayuda a nuestro amigo Mike a recuperar el tesoro de su familia, que lleva mas de
-50 generaciones en su familia, robado por su gran archienemigo Dr. Zalben, que busca hacerse con el control del mundo con una formula que ha de realizarse
-en este gran objeto.
+Acertijos, trampas y mucho más. El Dr Zalben quiere hacerse con el control del erlenmeyer dorado, y así, obtener poder absoluto sobre el planeta. El joven Mike es el único capaz de evitar está malvedad y salvarnos a todos, no sin antes ir avanzando en una serie de pruebas impuestas por el doctor. ¿Cuál será el destino de nuestro planeta? ¿Será Mike el elegido?
 
 ## Integrantes del equipo
 

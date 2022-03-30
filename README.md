@@ -4,9 +4,9 @@
 
 ## Integrantes del equipo
 
-[Jeans Darlenne Velásquez Alejandro : darlennev.\
+Jeans Darlenne Velásquez Alejandro : darlennev.\
 Susana Ramos Fernandez : susanaramos02\
-Eduardo Viejo Campos: EduardoViejo]
+Eduardo Viejo Campos: EduardoViejo
 
 ## Objetivos del trabajo
 

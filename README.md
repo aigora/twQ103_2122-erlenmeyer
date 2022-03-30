@@ -12,3 +12,4 @@ Eduardo Viejo Campos: EduardoViejo
 
 ## Objetivos del trabajo
 
+Conseguir poner las puntuaciones en ficheros, utilizar estructuras para recoger los datos del jugador, manejar funciones para cada puzzle o minijuego.

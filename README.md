@@ -6,7 +6,7 @@
 
 [Jeans Darlenne Velásquez Alejandro : darlennev.
 Susana Ramos Fernandez : susanaramos02]
-Eduardo Viejo Campos: 
+Eduardo Viejo Campos: EduardoViejo
 
 ## Objetivos del trabajo
 

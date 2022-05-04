@@ -45,6 +45,8 @@ void SopaLetras (){
         	printf("\n  l r u s d v h y f d r w f b h j o b m l\n");
             printf("\n  e o i r e u p t q u i e r e w v k b k j\n");
             printf("\n  i u r d t e s v l m g o i e a w n i i u\n");
+	    printf("\n");
+	    printf("Si deseas rendirte escribe 'paso'\n");
             printf("\n\nPalabra:");
             scanf("%s", & s);
             if(strcmp(s, "dorado")==0&&palabra1==0){
@@ -78,10 +80,18 @@ void SopaLetras (){
             	palabra5=1;
             	system("pause");
             }else if(strcmp(s, "paso")==0&&palabra6==0){
-            	printf("Te has rendido :( \n)");
-            	oportunidades=0;
-            	 puntos2=puntos2+0;
+            	printf("Te has rendido :( \n");
+            	puntos2=puntos2+0;
+            	printf("Deseas volver al menu principal? Escribe 'si' o 'no'.\n");
+            	scanf("%s", &volvermenu);
+            	if(strcmp(volvermenu, "si")==0){
+            		printf("puntos de este minijuego: %d\n");
+            		break;
+            	}else if (strcmp(volvermenu, "no")==0){
+            		oportunidades=0;
+		}
             	system("pause");
+            
             }else{
                 printf("\n\nIncorrecto. Esa palabra no esta o ya la has escrito.\n");
                 puntos2=puntos2-1;

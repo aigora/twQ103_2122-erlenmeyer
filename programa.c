@@ -123,8 +123,16 @@ int main(){
         switch ( opcion )
         {
             case '1': printf("LAS REGLAS SON LAS SIGUIENTES:\n");
-            		system("pause");
-        			system("cls");
+			printf("Se trata de un juego donde hay que superar una serie de minijuegos y acertijos para llegar al final de la historia.\n");
+            		printf("Nuestro protagonista Mike tiene que impedir que el Dr.Zalben se apropie del legendario erlenmeyer dorado. Es por eso que necesita de tu ayuda para enfrentarse a todos los retos que se le presente.\n");
+            		printf("Cada minijuego superado te da una serie de puntos, cuanto mas dificil, mas puntos. Si se supera todas los acertijos y  minijuegos correctamente , se obtendra ### puntos.\n");
+            		printf("\n");
+					printf("IMPORTANTE!!!\n");
+            		printf("- Si te rindes en los minijuegos no se te sumara los puntos o no al completo.\n");
+            		printf("- Si sales en mitad de partida (no puedes voler?)\n");
+            		printf("- Si ya estabas registrado, puedes mejorar la puntuacion (siempre que no sea el máximo). \n");
+            	 	system("pause");
+        		system("cls");
                       break;
 
             case '2': printf("MINIJUEGO 1\n");

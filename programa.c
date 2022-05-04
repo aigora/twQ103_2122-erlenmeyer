@@ -17,7 +17,10 @@ void minijuego1(){
 		if(strcmp(respuesta,acertar)==0){
 			printf("Acertaste\n");
 			puntos1=puntos1+5;
-		} else {
+		}if(strcmp(respuesta,"pista")==0){
+			printf("Los simbolos son:\n -Oxigeno: O (OJO HAY 2!!)\n -Tantalio: Ta\n -Silicio: Si\n -Fosforo: P\n");
+			printf("Reorganizando esas silabas/letras, puedes crear el nombre de otro elemento?\n");
+		}else {
 			printf("Has fallado\n");
 			puntos1=puntos1+0;
 		}
@@ -145,9 +148,10 @@ int main(){
         		system("cls");
                       break;
 
-            case '2': printf("MINIJUEGO 1\n");
-					minijuego1();
-					system("pause");
+            case '2':   system("cls");
+			printf("MINIJUEGO 1\n");
+				minijuego1();
+				system("pause");
         			system("cls");
         			
 					printf("MINIJUEGO 2\n");

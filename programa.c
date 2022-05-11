@@ -7,26 +7,26 @@ void minijuego1(){
 	char respuesta[50],acertar[50]="potasio";
 	int puntos1=0;
 	
-	printf("PRIMER MINIJUEGO\n");
 	printf("Disponemos de los siguientes compuestos:\n");     
 	printf("Oxigeno\nOxigeno\nTantalo\nSilicio\nFosforo\n");
 	printf("A partir de sus simbolos, se debe formar el nombre de otro elemento de la tabla periodica\n");
-	while(puntos1!=5){
+	printf("Si necesitas una ayuda escribe 'pista'.\n");
+	while(puntos1!=5){ //hasta que no la acierte(consiga los puntos) segirá estando el minijuego
 		printf("Respuesta(en minusculas):");
-		scanf("%s",respuesta);
+		scanf("%s",respuesta); //solucion: 'potasio'
 		if(strcmp(respuesta,acertar)==0){
-			printf("Acertaste\n");
+			printf("ENHORABUENA!!! Acertaste\n");
 			puntos1=puntos1+5;
-		}if(strcmp(respuesta,"pista")==0){
+		}else if(strcmp(respuesta,"pista")==0){ //ayuda por si el jugador no puede resolverlo
 			printf("Los simbolos son:\n -Oxigeno: O (OJO HAY 2!!)\n -Tantalio: Ta\n -Silicio: Si\n -Fosforo: P\n");
 			printf("Reorganizando esas silabas/letras, puedes crear el nombre de otro elemento?\n");
 		}else {
 			printf("Has fallado\n");
-			puntos1=puntos1+0;
+			//puntos1=puntos1+0;
 		}
 	}
 	
-	printf("Puntos: %d\n",puntos1);
+	printf("Puntos en este minijugeo: %d\n",puntos1);
 	
 }
 
@@ -34,7 +34,7 @@ void SopaLetras (){
 		
 	int oportunidades=5, puntos2=0;
 	int palabra1=0,palabra2=0,palabra3=0,palabra4=0,palabra5=0, palabra6=0;//0=disponible||1=ocupada
-	char s[20];
+	char s[20], volvermenu[20];
     
 	do{
        system("cls");
@@ -87,7 +87,7 @@ void SopaLetras (){
             	puntos2=puntos2+0;
             	printf("Deseas volver al menu principal? Escribe 'si' o 'no'.\n");
             	scanf("%s", &volvermenu);
-            	if(strcmp(volvermenu, "si")==0){
+            	if(strcmp(volvermenu,"si")==0){
             		printf("puntos de este minijuego: %d\n");
             		break;
             	}else if (strcmp(volvermenu, "no")==0){
@@ -143,18 +143,27 @@ int main(){
 					printf("IMPORTANTE!!!\n");
             		printf("- Si te rindes en los minijuegos no se te sumara los puntos o no al completo.\n");
             		printf("- Si sales en mitad de partida (no puedes voler?)\n");
-            		printf("- Si ya estabas registrado, puedes mejorar la puntuacion (siempre que no sea el máximo). \n");
+            		printf("- Si ya estabas registrado, puedes mejorar la puntuacion (siempre que no sea la puntuacion maxima). \n");
             	 	system("pause");
         		system("cls");
                       break;
 
             case '2':   system("cls");
-			printf("MINIJUEGO 1\n");
+            printf("Mike se encuentra en el laboratorio  como un dia mas. Es uno de los mejores quimicos que hay. Su trabajo consiste en comprobar que todas las formulas esten elaboradas correctamente.\n");
+			printf("Casi finalizando su turno, recibe una llamada. Al descolgar el telefeono, una voz misteriosa dice: \n -Veamos que tan buen quimico eres- dice la voz en tono desafiante.\n");
+			printf("Al pronunciar la ultima palabra cuelgan. Mike estaba bastante desconcertado ante esta situacion. En ese momento se escucha un fuerte golpe en la puerta. Cuando va a revisar, se encuentra una nota con lo siguiente escrito: \n");
+			printf("                                 MINIJUEGO 1\n");
 				minijuego1();
 				system("pause");
-        			system("cls");
-        			
-					printf("MINIJUEGO 2\n");
+        		system("cls");
+        	
+        		
+			printf("Eso ha sido pan comido para nuestro quimico Mike. \n-Que seria de nuestra vida sin el potasio-penso Mike para sí mismo.\n");
+			printf("Como cada dia, Mike siempre revisa el correo antes de finalizar su turno. Estaba terminando de revisar los correos pendientes cuando le llego uno de un usuario desconocido.\n");	
+			printf("'Dirigete al vestibulo'- decia aquel misterioso correo. Como ya era su hora de salida, le pillaba de paso.\n");
+			printf("Para llegar al vestibulo tenia 2 opciones: ir por las escaleras o ir por el ascensor.Su laboratorio estaba en la planta 4.");
+				system("pause");
+			printf("MINIJUEGO 2\n");
         			
         			SopaLetras();
         			system("pause");

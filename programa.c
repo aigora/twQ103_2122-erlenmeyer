@@ -666,7 +666,7 @@ int main(){
         		
         		for(i=0; i<contador; i++){
         			if (jugador[i].puntos>jugador[i+1].puntos) {
-        				printf("%d %s %d %d", orden, jugador[i].nombre, jugador[i].puntos, jugador[i].logro)
+        				printf("%d %s %d %d", orden, jugador[i].nombre, jugador[i].puntos, jugador[i].logro);
             			orden++;
             		} 
 				}
@@ -737,7 +737,7 @@ int main(){
         		
         		for(i=0; i<contador; i++){
         			if (jugador[i].puntos>jugador[i+1].puntos) {
-        				printf("%d %s %d %d", orden, jugador[i].nombre, jugador[i].puntos, jugador[i].logro)
+        				printf("%d %s %d %d", orden, jugador[i].nombre, jugador[i].puntos, jugador[i].logro);
             			orden++;
             		} 
 				}

@@ -614,7 +614,7 @@ int main(){
 
             case '2':   system("cls");
             	fentrada=fopen("entrada.txt","r");//abrimos el fichero para modificar y poner los datos del jugador.
-            	printf("Antes de empezar, Como te llamas?(Si introduces un nombre compuesto ponlo como el ejemplo.)");
+            	
             	
             	printf("Mike se encuentra en el laboratorio  como un dia mas. Es uno de los mejores quimicos que hay. Su trabajo consiste en comprobar que todas las formulas esten elaboradas correctamente.\n");
 				printf("Casi finalizando su turno, recibe una llamada. Al descolgar el telefeono, una voz misteriosa dice: \n -Veamos que tan buen quimico eres- dice la voz en tono desafiante.\n");

@@ -3,12 +3,12 @@
 #include<stdlib.h>
 #include <string.h>
 
-
 struct usuario{
 	char nombre;
 	int puntos;
 	int logro;
 };
+
 int minijuego1(int puntuacion){
 	char respuesta[50],acertar[50]="potasio";
 	int puntos1=0;
@@ -193,79 +193,93 @@ int SopaLetras (int puntuacion){
 	
 }
 
-void minijuego3(){
-	int jug, maq, op, r;
+int minijuego3(int puntuacion){
+	int jug, maq, r,puntos4=0,auxganar=0,auxperder=0;
 	printf(" Piedra, papel o tijera contra el Dr Zalben\n");
+	
 	do{
-		printf("Para jugar ingresaras solo el numero que corresponda a tu eleccion:\n");
-		srand(time(NULL));
-		r=rand()%3;
+		do{
+			printf("Para jugar ingresaras solo el numero que corresponda a tu eleccion:\n");
+			srand(time(NULL));
+			r=rand()%3;
 		
-		printf("0-------Piedra\n");
-		printf("1-------Papel\n");
-		printf("2-------Tijeras\n");
-		printf("Selecciona un numero del anterior menu\n");
-		scanf("%d", &jug);
+			printf("0-------Piedra\n");
+			printf("1-------Papel\n");
+			printf("2-------Tijeras\n");
+			printf("Selecciona un numero del anterior menu\n");
+			scanf("%d", &jug);
 		
-		switch (jug)
-		{
-			case 0:
-				printf("Elegiste Piedra\n");
-    			if (r==0){
-					printf("\tElegi Piedra\n");
-    				printf("\tEmpate\n");
-    			}else if (r==1){ 
-					printf("\tElegi Papel\n");
-					printf("\tGana la computadora\n");
-				}else if (r==2){
-					printf("\tElegi Tijeras\n");
-					printf("\tTu ganas\n");
-				}
-				break;
-			
-			case 1:
-				printf("Elegiste Papel\n");
-        			if (r==0){
-            			printf("\tElegi Piedra\n");
-            			printf("\tTu ganas\n");
-        			}else if (r==1){
-                		printf("\tElegi Papel\n\n");
-                		printf("\tEmpate\n");
-            		}else if (r==2){
-                    	printf("\tElegi Tijeras\n");
-						printf("\t\t\tGana la computadora\n");
-                	}
+			switch (jug){
+				case 0:
+					printf("Elegiste Piedra\n");
+    				if (r==0){
+						printf("\tElegi Piedra\n");
+    					printf("\tEmpate\n");
+    					puntos4=puntos4+3;
+    				}else if (r==1){ 
+						printf("\tElegi Papel\n");
+						printf("\tGana la computadora\n");
+						puntos4=puntos4+0;
+						auxperder++;
+					}else if (r==2){
+						printf("\tElegi Tijeras\n");
+						printf("\tTu ganas\n");
+						puntos4=puntos4+5;
+						auxganar++;
+					}
 					break;
+			
+				case 1:
+					printf("Elegiste Papel\n");
+    	    			if (r==0){
+        	    			printf("\tElegi Piedra\n");
+            				printf("\tTu ganas\n");
+            				puntos4=puntos4+5;
+            				auxganar++;
+        				}else if (r==1){
+                			printf("\tElegi Papel\n\n");
+                			printf("\tEmpate\n");
+                			puntos4=puntos4+3;
+            			}else if (r==2){
+	                    	printf("\tElegi Tijeras\n");
+							printf("\t\t\tGana la computadora\n");
+							puntos4=puntos4+0;
+							auxperder++;
+        	        	}
+						break;
 					
-			case 2 :
-				printf("Elegiste Tijeras\n");
-				if (r==0){
-            		printf("\tElegi Piedra\n\n");
-            		printf("\t\t\tGana la computadora\n\n\n");
-				}else if (r==1){
-                	printf("\tElegi Papel\n\n");
-            		printf("\t\t\tTu ganas\n\n\n");
-				}else if (r==2){
-                    printf("\tElegi Tijeras\n\n");
-					printf("\t\t\tEmpate\n\n\n");
-                }
-				break;
+				case 2 :
+					printf("Elegiste Tijeras\n");
+					if (r==0){
+	            		printf("\tElegi Piedra\n\n");
+    	        		printf("\t\t\tGana la computadora\n\n\n");
+        	    		puntos4=puntos4+0;
+        	    		auxperder++;
+					}else if (r==1){
+                		printf("\tElegi Papel\n\n");
+            			printf("\t\t\tTu ganas\n\n\n");
+            			puntos4=puntos4+5;
+            			auxganar++;
+					}else if (r==2){
+                    	printf("\tElegi Tijeras\n\n");
+						printf("\t\t\tEmpate\n\n\n");
+						puntos4=puntos4+3;
+                	}	
+					break;
 				
-			default:
-    		printf("Por favor solo introduce los numeros que aparecen en el menu");
-		} 
-
-		printf("Quieres volver a jugar?\n");
-		printf("Si deseas volver a jugar presiona 1\n");
-		printf("Si deseas salir del juego presiona 2\n");
-		scanf("%d", &op);
-		system("cls");
-	}while(op==1);
-		
-	printf("Ok, hasta luego, regresa pronto");
+				default:
+    				printf("Por favor solo introduce los numeros que aparecen en el menu");
+			} 
+		}while(jug!=0 && jug!=1 && jug!=2 && auxganar!=3 && auxperder!=3);
+	}while(auxganar!=3 && auxperder!=3);
+	
 	getch();
+	
+	printf("puntuacion del minijuego:%d\n", puntos4);
+	
+	puntuacion=puntuacion+puntos4;
+	return puntuacion;
 }
-
 
 int main(){
     char opcion;
@@ -311,7 +325,7 @@ int main(){
 
             case '2':   system("cls");
             	fentrada=fopen("entrada.txt","r");//abrimos el fichero para modificar y poner los datos del jugador.
-            	printf("Antes de empezar, Como te llamas?(Si introduces un nombre compuesto ponlo como el ejemplo.)");
+            	
             	
             	printf("Mike se encuentra en el laboratorio  como un dia mas. Es uno de los mejores quimicos que hay. Su trabajo consiste en comprobar que todas las formulas esten elaboradas correctamente.\n");
 				printf("Casi finalizando su turno, recibe una llamada. Al descolgar el telefeono, una voz misteriosa dice: \n -Veamos que tan buen quimico eres- dice la voz en tono desafiante.\n");
@@ -331,7 +345,8 @@ int main(){
         		printf("puntuacion total=%d\n", puntuacion);
         		system("pause");
         		system("cls");
-        
+        		
+        		printf("                                 MINIJUEGO 3\n");
         		puntuacion=SopaLetras(puntuacion);
         		printf("puntuacion total=%d\n", puntuacion);
         		system("pause");
@@ -344,6 +359,14 @@ int main(){
         		printf("Sea como sea, que caiga en manos de Dr. Zalben no debe de ser buena señal. Mike tiene que encontrarla antes de que sea tarde.");
         		system("pause");
         		system("cls");
+        		
+				printf("                                 MINIJUEGO 4\n");
+        		puntuacion=minijuego3(puntuacion);
+        		printf("puntuacion total=%d\n",puntuacion);
+        		system("pause");
+        		system("cls");
+        		
+        		
                 break;
 
             case '3': 

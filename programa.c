@@ -363,7 +363,8 @@ char frase[1000]="ippfNtxpofipsff iivpttextxpmipfxoxftxs fpeinx xiefpl tfaiputfx
 int minijuego3(int puntuacion){
 	int jug, maq, r,puntos4=0,auxganar=0,auxperder=0;
 	printf(" Piedra, papel o tijera contra el Dr Zalben\n");
-	
+	printf("-'Quien gane al mejor de 3 se lleva el erlenmeyer dorado'- dijo Dr. Zalben.\n");
+	printf("Mucha suerte, el mundo esta en tus manos (literalmente)");
 	do{
 		do{
 			printf("Para jugar ingresaras solo el numero que corresponda a tu eleccion:\n");
@@ -373,7 +374,7 @@ int minijuego3(int puntuacion){
 			printf("0-------Piedra\n");
 			printf("1-------Papel\n");
 			printf("2-------Tijeras\n");
-			printf("Selecciona un numero del anterior menu\n");
+			printf("Selecciona elnumero con que quieres jugar\n");
 			scanf("%d", &jug);
 		
 			switch (jug){
@@ -382,16 +383,16 @@ int minijuego3(int puntuacion){
     				if (r==0){
 						printf("\tElegi Piedra\n");
     					printf("\tEmpate\n");
-    					puntos4=puntos4+3;
+    					puntos4=puntos4+0;
     				}else if (r==1){ 
 						printf("\tElegi Papel\n");
-						printf("\tGana la computadora\n");
+						printf("\tGana Dr.Zalben\n");
 						puntos4=puntos4+0;
 						auxperder++;
 					}else if (r==2){
 						printf("\tElegi Tijeras\n");
 						printf("\tTu ganas\n");
-						puntos4=puntos4+5;
+						puntos4=puntos4+10;
 						auxganar++;
 					}
 					break;
@@ -401,15 +402,15 @@ int minijuego3(int puntuacion){
     	    			if (r==0){
         	    			printf("\tElegi Piedra\n");
             				printf("\tTu ganas\n");
-            				puntos4=puntos4+5;
+            				puntos4=puntos4+10;
             				auxganar++;
         				}else if (r==1){
                 			printf("\tElegi Papel\n\n");
                 			printf("\tEmpate\n");
-                			puntos4=puntos4+3;
+                			puntos4=puntos4+0;
             			}else if (r==2){
 	                    	printf("\tElegi Tijeras\n");
-							printf("\t\t\tGana la computadora\n");
+							printf("\t\t\tGana Dr.Zalben\n");
 							puntos4=puntos4+0;
 							auxperder++;
         	        	}
@@ -419,18 +420,18 @@ int minijuego3(int puntuacion){
 					printf("Elegiste Tijeras\n");
 					if (r==0){
 	            		printf("\tElegi Piedra\n\n");
-    	        		printf("\t\t\tGana la computadora\n\n\n");
+    	        		printf("\t\t\tGana Dr. Zalben\n\n\n");
         	    		puntos4=puntos4+0;
         	    		auxperder++;
 					}else if (r==1){
                 		printf("\tElegi Papel\n\n");
             			printf("\t\t\tTu ganas\n\n\n");
-            			puntos4=puntos4+5;
+            			puntos4=puntos4+10;
             			auxganar++;
 					}else if (r==2){
                     	printf("\tElegi Tijeras\n\n");
 						printf("\t\t\tEmpate\n\n\n");
-						puntos4=puntos4+3;
+						puntos4=puntos4+0;
                 	}	
 					break;
 				
@@ -496,6 +497,7 @@ int main(){
 				//minijuego1
 				puntuacion=puntuacion+minijuego1(puntuacion);
 				printf("Puntuacion= %d\n", puntuacion);
+				printf("NOTA:Sabias que el potasio es el elemento '19' en la tabla periodica?");
 				system("pause");
 				system("cls");
         	
@@ -573,3 +575,4 @@ int main(){
 
     return 0;
 }
+   

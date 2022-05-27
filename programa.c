@@ -4,19 +4,13 @@
 #include <string.h>
 
 struct usuario{
-	char nombre;
+	char nombre[50];
 	int puntos;
-	int logro;
 };
 
 int minijuego1(int puntuacion){
 	char respuesta[50],acertar[50]="potasio";
 	int puntos1=0;
-	
-	printf("Mike se encuentra en el laboratorio  como un dia mas. Es uno de los mejores quimicos que hay. Su trabajo consiste en comprobar que todas las formulas esten elaboradas correctamente.\n");
-	printf("Casi finalizando su turno, recibe una llamada. Al descolgar el telefeono, una voz misteriosa dice: \n -Veamos que tan buen quimico eres- dice la voz en tono desafiante.\n");
-	printf("Al pronunciar la ultima palabra cuelgan. Mike estaba bastante desconcertado ante esta situacion. En ese momento se escucha un fuerte golpe en la puerta. Cuando va a revisar, se encuentra una nota con lo siguiente escrito: \n");
-	printf("                                 MINIJUEGO 1\n");
 	
 	printf("Disponemos de los siguientes compuestos:\n");     
 	printf("Oxigeno\nOxigeno\nTantalo\nSilicio\nFosforo\n");
@@ -49,12 +43,6 @@ int minijuego2(int puntuacion){
 	int resp;
 	int aux2=0;
 	
-	
-	printf("Eso ha sido pan comido para nuestro quimico Mike. \n-Que seria de nuestra vida sin el potasio-penso Mike para sí mismo.\n");
-	printf("Como cada dia, Mike siempre revisa el correo antes de finalizar su turno. Estaba terminando de revisar los correos pendientes cuando le llego uno de un usuario desconocido.\n");	
-	printf("'Dirigete al vestibulo'- decia aquel misterioso correo. Como ya era su hora de salida, le pillaba de paso.\n");
-	printf("Para llegar al vestibulo tenia 2 opciones: ir por las escaleras o ir por el ascensor.Su laboratorio estaen la planta 4...\n");
-	printf("                                 MINIJUEGO 2\n");
 	printf("Por donde deberia ir Mike? (1) escaleras o (2) ascensor\n");
 	
 	
@@ -204,167 +192,10 @@ int SopaLetras (int puntuacion){
 	
 }
 
-int codigosecreto(int puntuacion){
-char frase[1000]="ippfNtxpofipsff iivpttextxpmipfxoxftxs fpeinx xiefpl tfaiputfxlipxaff txttAfix2ptxfip0xtx3fp, ptxyifpa xffsiiptaxfibpxxtxfefxips xfcpixutiaptxfliptxf.";
-  char fraseResultante[500];
-  char caracter[1];
-  char aux[400],  aux1[400],  aux2[400], aux3[400], aux4[400];
-  int i, j;
-
-  printf("Mike estaba muy preocupado por esta situación, donde estaria el Dr. Zalben?\n");
-  printf("Vuelve a sonar el telefono, esta vez el mensaje era el siguiente:\n");
-  printf("-'Has mirado la guantera del coche? JAJAJAJA'- la voz se rie con voz tenebrosa.\n");
-  printf("Mike va corriendo hasta el coche y se encuentra otra nota con lo siguiente:\n");
-  printf("'Si mi ubicacion deseas conocer, primero las letras has de esconder.'\n");
-  system("pause");
-  system("cls");
-  printf("Hay que eliminar las letras que sobran para descubrir el mensaje secreto.(Nota: si hay 2 letras iguales juntas seguro que sobran)\n");
-  printf ("%s\n ",frase);
-  // nos aseguramos que elimine las letras correctas
-  while(strcmp(caracter, "f")!=0 && strcmp(caracter, "i")!=0 && strcmp(caracter, "p")!=0 && strcmp(caracter, "x")!=0 && strcmp(caracter, "t")!=0 ){
-	printf ("\nIntroduzca el caracter a eliminar: \n");
-	gets (caracter);
-  }
-  
-  i = 0;
-  j = 0;
-  
-  // eliminamos el caracter en la cadena
-  while (frase[i] != '\0'){
-    if (caracter[0] != frase[i]){
-      fraseResultante[j] = frase[i];
-	  j++;
-    }
-    
-    i++;
-  }
-  
-  fraseResultante[j] = '\0';
-  printf ("\n\nFrase resultante: \n\n%s", fraseResultante);
-
-	i=0;
-	while (fraseResultante[i]!='\0'){
-		aux[i]=fraseResultante[i];
-		i++;
-	}
-	//eliminamos 1 de las 5 letras
-	
-	aux[i]='\0';
-	
-	while(strcmp(caracter, "f")!=0 && strcmp(caracter, "i")!=0 && strcmp(caracter, "p")!=0 && strcmp(caracter, "x")!=0 && strcmp(caracter, "t")!=0 ){
-		printf ("\nIntroduzca el caracter a eliminar: \n");
-		gets (caracter);
-	}
-	
-	i = 0;
-	j = 0;
-  
-  while (aux[i] != '\0'){
-    if (caracter[0] != aux[i]){
-      fraseResultante[j] = aux[i];
-	  j++;
-    }
-    
-    i++;
-  }
-  
-  fraseResultante[j] = '\0';
-  printf ("\n\nFrase resultante: \n\n%s", fraseResultante);
-
-	i=0;
-	while (fraseResultante[i]!='\0'){
-		aux1[i]=fraseResultante[i];
-		i++;
-	}
-	//eliminamos 2 de las 5 letras
-	
-	aux1[i]='\0';
-	
-	while(strcmp(caracter, "f")!=0 && strcmp(caracter, "i")!=0 && strcmp(caracter, "p")!=0 && strcmp(caracter, "x")!=0 && strcmp(caracter, "t")!=0 ){
-		printf ("\nIntroduzca el caracter a eliminar: \n");
-		gets (caracter);
-	}
-	i = 0;
-    j = 0;
-  
-  while (aux1[i] != '\0'){
-    if (caracter[0] != aux1[i]){
-      fraseResultante[j] = aux1[i];
-	  j++;
-    }
-    
-    i++;
-  }
-  
-  fraseResultante[j] = '\0';
-  printf ("\n\nFrase resultante: \n\n%s", fraseResultante);
-
-	i=0;
-	while (fraseResultante[i]!='\0'){
-		aux2[i]=fraseResultante[i];
-		i++;
-	}
-	//eliminamos 3 de las 5 letras
-	
-	aux2[i]='\0';
-	
-	while(strcmp(caracter, "f")!=0 && strcmp(caracter, "i")!=0 && strcmp(caracter, "p")!=0 && strcmp(caracter, "x")!=0 && strcmp(caracter, "t")!=0 ){
-		printf ("\nIntroduzca el caracter a eliminar: \n");
-		gets (caracter);
-	}
-	i = 0;
-    j = 0;
-  
-  while (aux2[i] != '\0'){
-    if (caracter[0] != aux2[i]){
-      fraseResultante[j] = aux2[i];
-	  j++;
-    }
-    
-    i++;
-  }
-  
-  fraseResultante[j] = '\0';
-  printf ("\n\nFrase resultante: \n\n%s", fraseResultante);
-
-	i=0;
-	while (fraseResultante[i]!='\0'){
-		aux3[i]=fraseResultante[i];
-		i++;
-	}
-	//eliminamos 4 de las 5 letras
-	
-	aux3[i]='\0';
-	
-	while(strcmp(caracter, "f")!=0 && strcmp(caracter, "i")!=0 && strcmp(caracter, "p")!=0 && strcmp(caracter, "x")!=0 && strcmp(caracter, "t")!=0 ){
-		printf ("\nIntroduzca el caracter a eliminar: \n");
-		gets (caracter);
-	}
-	i = 0;
-    j = 0;
-  
-  while (aux3[i] != '\0'){
-    if (caracter[0] != aux3[i]){
-      fraseResultante[j] = aux3[i];
-	  j++;
-    }
-    
-    i++;
-  }
-  
-  fraseResultante[j] = '\0';
-  printf ("\n\nFrase resultante: \n\n%s", fraseResultante);// heliminamos ya las letras y descframos el mensaje.
-  
-  puntuacion=puntuacion+25;
-  
-  return puntuacion;
-}
-
 int minijuego3(int puntuacion){
 	int jug, maq, r,puntos4=0,auxganar=0,auxperder=0;
 	printf(" Piedra, papel o tijera contra el Dr Zalben\n");
-	printf("-'Quien gane al mejor de 3 se lleva el erlenmeyer dorado'- dijo Dr. Zalben.\n");
-	printf("Mucha suerte, el mundo esta en tus manos (literalmente)");
+	
 	do{
 		do{
 			printf("Para jugar ingresaras solo el numero que corresponda a tu eleccion:\n");
@@ -374,7 +205,7 @@ int minijuego3(int puntuacion){
 			printf("0-------Piedra\n");
 			printf("1-------Papel\n");
 			printf("2-------Tijeras\n");
-			printf("Selecciona elnumero con que quieres jugar\n");
+			printf("Selecciona un numero del anterior menu\n");
 			scanf("%d", &jug);
 		
 			switch (jug){
@@ -383,16 +214,16 @@ int minijuego3(int puntuacion){
     				if (r==0){
 						printf("\tElegi Piedra\n");
     					printf("\tEmpate\n");
-    					puntos4=puntos4+0;
+    					puntos4=puntos4+3;
     				}else if (r==1){ 
 						printf("\tElegi Papel\n");
-						printf("\tGana Dr.Zalben\n");
+						printf("\tGana el Dr. Zalben\n");
 						puntos4=puntos4+0;
 						auxperder++;
 					}else if (r==2){
 						printf("\tElegi Tijeras\n");
 						printf("\tTu ganas\n");
-						puntos4=puntos4+10;
+						puntos4=puntos4+5;
 						auxganar++;
 					}
 					break;
@@ -402,15 +233,15 @@ int minijuego3(int puntuacion){
     	    			if (r==0){
         	    			printf("\tElegi Piedra\n");
             				printf("\tTu ganas\n");
-            				puntos4=puntos4+10;
+            				puntos4=puntos4+5;
             				auxganar++;
         				}else if (r==1){
                 			printf("\tElegi Papel\n\n");
                 			printf("\tEmpate\n");
-                			puntos4=puntos4+0;
+                			puntos4=puntos4+3;
             			}else if (r==2){
 	                    	printf("\tElegi Tijeras\n");
-							printf("\t\t\tGana Dr.Zalben\n");
+							printf("\t\t\tGana el Dr. Zalben\n");
 							puntos4=puntos4+0;
 							auxperder++;
         	        	}
@@ -420,18 +251,18 @@ int minijuego3(int puntuacion){
 					printf("Elegiste Tijeras\n");
 					if (r==0){
 	            		printf("\tElegi Piedra\n\n");
-    	        		printf("\t\t\tGana Dr. Zalben\n\n\n");
+    	        		printf("\t\t\tGana el Dr. Zalben\n\n\n");
         	    		puntos4=puntos4+0;
         	    		auxperder++;
 					}else if (r==1){
                 		printf("\tElegi Papel\n\n");
             			printf("\t\t\tTu ganas\n\n\n");
-            			puntos4=puntos4+10;
+            			puntos4=puntos4+5;
             			auxganar++;
 					}else if (r==2){
                     	printf("\tElegi Tijeras\n\n");
 						printf("\t\t\tEmpate\n\n\n");
-						puntos4=puntos4+0;
+						puntos4=puntos4+3;
                 	}	
 					break;
 				
@@ -453,9 +284,10 @@ int main(){
     char opcion;
     int puntuacion=0, orden=1;
     char nombre[50],respuesta;
-    struct usuario jugador[100];
-	int contador=0, i;
+    struct usuario datos[100];
+	int contador=0, i,auxiliar=0,comparar;
     FILE*fentrada;
+	FILE*fsalida;
 
     do
     {
@@ -494,20 +326,32 @@ int main(){
             case '2':   system("cls");
             	fentrada=fopen("entrada.txt","r");//abrimos el fichero para modificar y poner los datos del jugador.
             	
-				//minijuego1
+            	printf("Introduce tu nombre:\n");
+            	fflush(stdin);
+				scanf("%s",nombre);
+            	
+            	system("pause");
+        		system("cls");
+            	
+            	printf("Mike se encuentra en el laboratorio  como un dia mas. Es uno de los mejores quimicos que hay. Su trabajo consiste en comprobar que todas las formulas esten elaboradas correctamente.\n");
+				printf("Casi finalizando su turno, recibe una llamada. Al descolgar el telefeono, una voz misteriosa dice: \n -Veamos que tan buen quimico eres- dice la voz en tono desafiante.\n");
+				printf("Al pronunciar la ultima palabra cuelgan. Mike estaba bastante desconcertado ante esta situacion. En ese momento se escucha un fuerte golpe en la puerta. Cuando va a revisar, se encuentra una nota con lo siguiente escrito: \n");
+				printf("                                 MINIJUEGO 1\n");
 				puntuacion=puntuacion+minijuego1(puntuacion);
 				printf("Puntuacion= %d\n", puntuacion);
-				printf("NOTA:Sabias que el potasio es el elemento '19' en la tabla periodica?");
 				system("pause");
 				system("cls");
         	
-				//minijuego2
+				printf("Eso ha sido pan comido para nuestro quimico Mike. \n-Que seria de nuestra vida sin el potasio-penso Mike para sí mismo.\n");
+				printf("Como cada dia, Mike siempre revisa el correo antes de finalizar su turno. Estaba terminando de revisar los correos pendientes cuando le llego uno de un usuario desconocido.\n");	
+				printf("'Dirigete al vestibulo'- decia aquel misterioso correo. Como ya era su hora de salida, le pillaba de paso.\n");
+				printf("Para llegar al vestibulo tenia 2 opciones: ir por las escaleras o ir por el ascensor.Su laboratorio estaba en la planta 4.\n");
+				printf("                                 MINIJUEGO 2\n");
         		puntuacion=minijuego2(puntuacion);
         		printf("puntuacion total=%d\n", puntuacion);
         		system("pause");
         		system("cls");
         		
-        		//sopa de letra
         		printf("                                 MINIJUEGO 3\n");
         		puntuacion=SopaLetras(puntuacion);
         		printf("puntuacion total=%d\n", puntuacion);
@@ -517,27 +361,12 @@ int main(){
         		printf("Oh,no! El Dr. Zalben quiere destruir el mundo! Y lo hara con la ayuda del erlenmeyer dorado!\n");
         		printf("Mike habia oido hablar del erlenmeyer dorado por el mundo quimico, pero pensaba que se trataba de una simple leyenda.\n");
         		printf("La leyenda decia que cualquier reaccion quimica que se produjese en el, iba ser infinita. De alguna manera tiene el poder de regenerar la ultima reaccion que hubiese.\n");
-        		printf("Esto podia ser una bendicion o una maldicion segun en manos de quien llegara, podria regenerar la cura de alguna enfermedad letal como la de algun tipo de veneno.\n");
-        		printf("Sea como sea, que caiga en manos de Dr. Zalben no debe de ser buena senyal. Mike tiene que encontrarla antes de que sea tarde.");
+        		printf("Esto podia ser una bendicion ouna maldicion segun en manos de quien llegara. podriaregenerar la cura de alguna enfermedad letal como la de algun tipo de veneno.\n");
+        		printf("Sea como sea, que caiga en manos de Dr. Zalben no debe de ser buena señal. Mike tiene que encontrarla antes de que sea tarde.");
         		system("pause");
         		system("cls");
         		
-        		//codigo secreto
 				printf("                                 MINIJUEGO 4\n");
-				puntuacion=codigosecreto(puntuacion);
-				printf("ENHORABUENA!! Has decifrado el mensaje\n");
-				printf("\n puntuacion total=%d\n",puntuacion);
-				system("pause");
-        		system("cls");
-        		
-        		//piedra,papel o tijera
-        		printf("En el aula A203 fue donde Mike conocio por primera vez a Dr.Zalben. Ambos prometian ser los prodigios de la quimica, pero Zalben lejos de ayudar, queria dominar.");
-        		printf("Queria ser un quimico capaz de crear la enfermedad mas letal y ser el unico que tuviese la cura, solo el podria beneficiarse, incluso economicamente."),
-        		printf("Los más altos cargos se enteraron de esto y lo consideraron una amenaza para la humanidad. Estaba en busca y captura, pero pudo escapar y esconderse de la justiacia, hasta hoy");
-        		printf("\n");
-        		printf("Mike debia darse prisa, el tiempo estaba en su contra.\n");
-        		printf("Cogio el coche y se dirigio al aula. Ahi estaba él. Ahora debian demostrar quien era el mejor en una épica batalla");
-        		printf("                                 MINIJUEGO 5\n");
         		puntuacion=minijuego3(puntuacion);
         		printf("puntuacion total=%d\n",puntuacion);
         		system("pause");
@@ -547,27 +376,43 @@ int main(){
                 break;
 
             case '3': 
-            	fentrada = fopen("entrada.txt", "r");
-        		if (fentrada == NULL) {
-                	printf("Error de lectura\n");
-                	return 0;
-        		}
-        		
-				i=0;
-        		contador=0;
-        		while (fscanf(fentrada, "%s %d %d", jugador[i].nombre, jugador[i].puntos, jugador[i].logro) != EOF) {
-                	i++;
-                	contador++;                
+				
+				strcpy(datos[i].nombre,nombre);
+            	puntuacion=datos[i].puntos;
+            	
+				//1. Abrir el fichero para lectura
+				
+				fentrada=fopen("entrada.txt","r");
+				if(fentrada==NULL){
+					printf("Error en la apertura del fichero.\n");
 				}
-        		fclose(fentrada);
-        		
-        		for(i=0; i<contador; i++){
-        			if (jugador[i].puntos>jugador[i+1].puntos) {
-        				printf("%d %s %d %d", orden, jugador[i].nombre, jugador[i].puntos, jugador[i].logro);
-            			orden++;
-            		} 
+			
+				//2. Leer el fichero e imprimirlo por pantalla
+				fscanf(fentrada,"%s %d",nombre,puntuacion);
+				
+				printf("%s %d",nombre,puntuacion);
+				//3. Cerrar el fichero
+				
+				fclose(fentrada);
+				
+				//4. Abrir el fichero para escritura
+				fentrada=fopen("entrada.txt","w");
+				if(fentrada==NULL){
+					printf("Error en la apertura de ficheros\n");
+					return 0;
 				}
-        
+				
+				//5. Escribir de memoria al fichero
+				
+				fprintf(fentrada,"%s %d",datos[i].nombre,datos[i].puntos);
+				
+				//6. Cerrar el fichero de escritura
+				
+				fclose(fentrada);
+				
+				
+				printf("%s %d\n",datos[i].nombre,datos[i].puntos);
+				
                 break;
         }
 
@@ -575,4 +420,3 @@ int main(){
 
     return 0;
 }
-   

@@ -282,9 +282,9 @@ int minijuego3(int puntuacion){
 
 int main(){
     char opcion;
-    int puntuacion=0, orden=1;
+    int puntuacion=0, variable=0;
     char nombre[50],respuesta;
-    struct usuario datos[100];
+    struct usuario datos[200];
 	int contador=0, i,auxiliar=0,comparar;
     FILE*fentrada;
 	FILE*fsalida;
@@ -329,7 +329,9 @@ int main(){
             	printf("Introduce tu nombre:\n");
             	fflush(stdin);
 				scanf("%s",nombre);
-            	
+				
+				fprintf(fentrada,"%s\n",nombre);
+				
             	system("pause");
         		system("cls");
             	
@@ -376,42 +378,24 @@ int main(){
                 break;
 
             case '3': 
-				
-				strcpy(datos[i].nombre,nombre);
-            	puntuacion=datos[i].puntos;
-            	
-				//1. Abrir el fichero para lectura
-				
 				fentrada=fopen("entrada.txt","r");
-				if(fentrada==NULL){
-					printf("Error en la apertura del fichero.\n");
-				}
-			
-				//2. Leer el fichero e imprimirlo por pantalla
-				fscanf(fentrada,"%s %d",nombre,puntuacion);
-				
-				printf("%s %d",nombre,puntuacion);
-				//3. Cerrar el fichero
-				
-				fclose(fentrada);
-				
-				//4. Abrir el fichero para escritura
-				fentrada=fopen("entrada.txt","w");
 				if(fentrada==NULL){
 					printf("Error en la apertura de ficheros\n");
 					return 0;
 				}
 				
-				//5. Escribir de memoria al fichero
+				fsalida=fopen("salida.txt","w");
+				if(fsalida==NULL){
+					printf("Error en la apertura de ficheros\n");
+					return 0;
+				}
 				
-				fprintf(fentrada,"%s %d",datos[i].nombre,datos[i].puntos);
-				
-				//6. Cerrar el fichero de escritura
+				while((variable=fgetc(fentrada))!=EOF){
+					fputc(variable,fsalida);
+				}
 				
 				fclose(fentrada);
-				
-				
-				printf("%s %d\n",datos[i].nombre,datos[i].puntos);
+				fclose(fsalida);
 				
                 break;
         }

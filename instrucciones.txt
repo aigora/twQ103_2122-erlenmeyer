@@ -1,0 +1,9 @@
+LAS REGLAS SON LAS SIGUIENTES:
+Se trata de un juego donde hay que superar una serie de minijuegos y acertijos para llegar al final de la historia.
+Nuestro protagonista Mike tiene que impedir que el Dr.Zalben se apropie del legendario erlenmeyer dorado. Es por eso que necesita de tu ayuda para enfrentarse a todos los retos que se le presente.
+Cada minijuego superado te da una serie de puntos, cuanto mas dificil, mas puntos. Si se supera todas los acertijos y  minijuegos correctamente , se obtendra 100 puntos.
+
+IMPORTANTE!!!
+    - Si te rindes en los minijuegos no se te sumara los puntos o no al completo.
+    - No se puede salir en mitad de la partida. Si no perderas todos los puntos        	
+    - Si ya estabas registrado, puedes mejorar la puntuacion (siempre que no sea la puntuacion maxima). 

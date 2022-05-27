@@ -294,7 +294,7 @@ int main(){
         printf("Bienvenido el Erlenmeyer Dorado valiente\n");
         printf("1. REGLAS\n");
         printf("2. JUGAR\n");
-        printf("3. RANKING\n");
+        printf("3. RECUENTO\n");
         printf("4. SALIR\n");
 
         do
@@ -393,6 +393,8 @@ int main(){
 				while((variable=fgetc(fentrada))!=EOF){
 					fputc(variable,fsalida);
 				}
+				
+				printf("%s %d\n",nombre,puntuacion);
 				
 				fclose(fentrada);
 				fclose(fsalida);
